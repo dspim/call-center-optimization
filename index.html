@@ -57,7 +57,7 @@
     <table class="top15 center table table-striped">
 
         <tr>
-            <td><img class="intro" src="http://imgur.com/fdJT3th.png"/><br><strong>國生<strong></td>
+            <td><img class="intro" src="http://imgur.com/NVLMWBH.png"/><br><strong>國生<strong></td>
             <td><img class="intro" src="http://imgur.com/fdJT3th.png"/><br><strong>呂北<strong></td>
             <td><img class="intro" src="http://imgur.com/4BkBBDN.png"/><br><strong>小馬<strong></td>
 			<td><img class="intro" src="http://imgur.com/99h29Ca.png"/><br><strong>家俊<strong></td>
@@ -93,12 +93,11 @@
             [2] 首先我們將105年度中所有出勤工作紀錄表、出勤彙總報告自半結構化資料轉為結構化資料，拆解出有效資訊並轉化為欄位，並根據紀錄內容建立「特徵值」欄位；並進一步清洗、分類社工師所採取的「行動」細節，做為後續的資料分析、視覺化的基礎資料。<br><br>
            
         </span><br>
-        <img class="d4sgimg" style="width: 800px; height: 500px;" src="http://imgur.com/wcg6LW7.png" /><br>
+        <img class="d4sgimg" style="width: 800px; height: 450px;" src="http://imgur.com/wcg6LW7.png" /><br>
         <span><em>ETL流程示意圖</em></span>
 		<br>
 		<br>
-		 <strong><li>探索性資料分析 (EDA)</li></strong>
-		 <ul><li>分析每一個案件所有行動組合</li></ul><br><br>
+		 <li><strong>探索性資料分析 (EDA)- 案件行動組合</strong></li>
             [1] 案件進入家防中心時，開始記錄處理此案件之每一通聯繫電話起訖的時間點。<br><br>
             [2] 案件分為兩類: 社工已出勤、社工未出勤<br><br>
 			[3] 以人眼辨識每一通電話其屬於哪一個動作，由於動作類別過多，目前暫且分為五大步驟 (A通報來源、B聯繫外、C聯繫內、D督導意見、E轉介表)<br><br>
@@ -114,13 +113,13 @@
         <img class="d4sgimg" style="width: 800px; height: 400px;" src="http://imgur.com/eyAkcOB.png" /><br>
 		<br>
 		<br>
-		 <ul><li>行動探索小結</li>
+		 <ul><li>行動組合分析小結</li>
 		 <br>
             [1] 有出勤案件主要花在B還有C兩者的行動上，Ｄ與Ｅ兩行動則較少，但是D亦占一個事件20%比例的行動量，而平均一案件所需之行動次數為22.3次。<br><br>
             [2] 未出勤案件主要花在行動B為大宗，到一個案件的一半比例（51%），再來是.Ｄ（督導的意見）的部分。這裡可以理解為：當專線人員花了較多時間在蒐 集資訊、以及與各單位溝通（通報來源等），一些可能本來需要出勤的案件，就因此能在線上就被妥善處理（例如找到案主的家人協助安置等），督導亦能在資訊充分的狀況下，能夠明確判斷「不用派勤」（免於因未派勤而可能造成事件悲劇的恐懼），而平均一案件所需之行動次數為12.9次。<br><br>
         <br>
 		</ul>
-		<li>分析每一個案件派遣時間、尖離峰</li>
+		<strong><li>探索性資料分析 (EDA)- 案件派遣時間、離尖峰分佈</li></strong>
             [1] 案件進入家防中心時，記錄此案件之通報時間<br><br>
             [2] 若案件經過評估需要社工出勤，紀錄出勤之時間<br><br>
         <br>
@@ -130,15 +129,22 @@
 		<br>
         <img class="d4sgimg" style="width: 800px; height: 400px;" src="http://imgur.com/IorXvuM.png" /><br>
 		<br>
-		<ul><li>時間探索小結</li></ul>
+		<ul><li>時間探索小結</li>
 		 <br>
             [1] 通報家防中心之案件，較多數時間點大約落至晚上6點至午夜1點之間，亦即大部分家庭晚餐至就寢時間。<br><br>
-            [2] 承1.，經過督導多方面考量，需要社工出勤之案件，大多數出勤之時間點亦大約落至晚上6點至午夜1點之間，因此家防人力之配置，建議應著重於此時間點。<br><br>
+            [2] 承1.，經過督導多方面考量，需要社工出勤之案件，大多數出勤之時間點亦大約落至晚上6點至午夜1點之間，因此家防人力之配置，建議應著重於此時間點。<br><br></ul>
         <br>
 		
 		<strong><li>資料分群 (Hierarchical clustering)</li></strong>
-		<ul><li>分析各個案件彼此之距離或相似性</li></ul><br><br>
-            [1] 無論有出勤或未出勤之案件，包含了連續型、離散型解釋變項，希望利用這些解釋變項，觀看案件群聚現象，若有出勤之案件落於大部分皆為未出勤之案件的群組中，表示其可能為不應派勤之案件;<br><br>
+		<ul><li>分析各個案件彼此之距離或相似性</li><br><br>
+            [1] 無論有出勤或未出勤之案件，皆包含了連續型、離散型解釋變項，希望利用這些解釋變項，觀看這些案件群聚現象，若有出勤之案件落於大部分皆為未出勤之案件的群組中，表示其可能為不應派勤之案件; 相反地，若未出勤之案件落於大部分皆為有出勤之案件的群組中，表示其可能為應派勤之案件。<br>
+			Note:相似度分析解釋變項 — (案件類型、通報來源、服務總時間、在案情形、行動B次數、行動C次數、行動D次數、行動E次數、案主年齡、案主性別、案主教育程度、是否身心障礙)<br><br>
+            [2] 承上，由於解釋變項包含了連續型、離散型，此次分析採用較客觀之度量指標，Gower distance指標，量測各個案件彼此之距離
+		<br>
+		<img class="d4sgimg" style="width: 800px; height: 400px;" src="http://imgur.com/ttE8hwQ.png" /><br>
+		<br></ul>
+		<ul><li>案件間距離探索小結</li><br><br>
+			[1] 使用Gower distance指標分析，分析結果發現無論在有出勤或未出勤的案件，並沒有找到特別顯著的相似點。故我們現階段僅能說：所有的案件都是獨一無二的個案，皆有其各自不同的考量，才能判斷是否需要派勤社工。
 
 		
 		
@@ -149,7 +155,7 @@
 		 [3] 派勤組合：<br>透過派勤組合分析結果，就任社工師就任督導後的年資，與備勤社工的年資，為是否決定派勤的主要因素，因此我們建議給予出就任督導的社工師，更完備的職務熟悉訓練，以及加強與資深督導的交流，應能有效的將派勤結果一致化，避免輪值社工因不可預期的結果而產生倦怠感。<br><br>
 		 <li>案件特質分析</li>
 		 [1] 出勤案件/未出勤案件相似度分析：<br>受限資料數量、有效特徵值，此次的相似度分析，無法有效歸納出派勤與否的關鍵因素，及預測模型，因各案件呈現出獨一無二的存在。但此結果也使我們反思，處理「人為」因素複雜的資料時，我們必須取得更細緻的資料，同時更謹慎小心的判讀分析結果。<br><br>
-        <span><br>
+		<span><br>
 		
         </span><br>
 
@@ -162,7 +168,7 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="center"><p class="text-muted">All right reserved © 2016 D4SG@NCCU</p></div>
+            <div class="center"><p class="text-muted">All right reserved © 2017 D4SG</p></div>
         </div>
     </footer>
 </div>
