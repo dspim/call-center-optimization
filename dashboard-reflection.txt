@@ -1,0 +1,77 @@
+Q1. How often should the data be updated in the dashboard?
+A1. Manually. But if there is no any action by users, at least daily.
+
+Q2. Who will use the dashboard? Is it for a single person, a single group, or people in several different departments?
+A2. Decision makers, for a single group.
+
+Q3. What will they use the dashboard to do? What questions will they use it to answer? What actions will they take in response to these answers?
+A3. Formulate a question by selecting what kind of plotting and what data to show, assisting decision makings.
+
+Q4. What specific information should be displayed on the dashboard? List all of the data items that should be included on the dashboard. Also indicate the level of summary/detail at which each item should be expressed on the dashboard.
+A4. Guest traffic or workload comparison with last time.
+	A daily work-log of a masseur contains:
+		1. names (of masseur, helper and shop)
+		2. logging date
+		3. number of assigned service-time (and not-assigned service-time)
+		4. number of guest (a guest may have not only one service-time)
+
+Q5. Which of the data items listed above are the key (i.e., most important) items needed to meet the objectives supported by the dashboard?
+A5. The number of assigned and not assigned service-time with the masseur.
+
+Q6. What are the logical groupings that could be used to organize these data items
+on the dashboard? Into which of these groups does each data item belong?
+A6.
+	1. Work-log group by masseur
+		1) Get which helpers help the masseur, and even group by helper
+		2) Get where the masseur serves, and even group by shop
+		3) Get how many times the masseur works in a specific period of time, and even group by each period
+		4) Get the summary of assigned, not-assigned service-time and the number of the guests, or even group by shop or other data items, or a specific period of time
+
+	2. Work-log group by helper
+		1) Get to whom a helper helps, and even group by masseur
+		2) Get where the helper helps the masseurs, and even group by shop
+		3) Get how many times the helper appears in a specific period of time, and even group by each period
+		4) Get the summary of the salary in a work-log which contains the helper
+
+	3. Work-log group by shop
+		1) Get which masseurs works here, and even group by masseur
+		2) Get which helpers works here, and even group by helper
+		3) Get how many work-logs are produced here in a specific period of time, and even group by each period
+		4) Get the summary of assigned, not-assigned service-time and the number of the guests, or even group by a specific period of time
+
+	A work-log belongsTo a masseur, a helper and a shop.
+	A masseur hasMany work-logs.
+	A helper hasMany work-logs.
+	A shop hasMany work-logs.
+
+Q7. What are the useful comparisons that will allow the dashboard’s users to see the data items listed above in context? For instance, if one of the measures that your dashboard displays is revenue, do you have targets or historical data that could also be displayed to make current revenue more meaningful?
+A7.
+	1. Compare the number of assigned service-time and not-assigned service-time (then calculate the income), and the number of guests
+		1) Between masseurs
+		2) Between helpers
+		3) Between shops
+		4) Between specific periods of time
+	2. From 1, but of a specific masseur
+		1) Between helpers
+		2) Between shops
+		3) Between specific periods of time
+	3. From 1, but of a specific helper
+		1) Between masseurs
+		2) Between shops
+		3) Between specific periods of time
+	4. From 1, but of a specific shop
+		1) Between masseurs
+		2) Between helpers
+		3) Between specific periods of time
+	5. From 1, but of a specific period of time
+		1) Between masseurs
+		2) Between helpers
+		3) Between shops
+
+	And so on....
+
+	Formula:
+		COMPARE {assigned service-time, not-assigned service-time, guests number} (select one or more)
+		OF Target={Masseur, Helper, Shop, Period} (select zero or more, but not all)
+		BETWEEN {Masseur, Helper, Shop, Period}-Target (select one)
+		BY {sum, count, average} (select one)

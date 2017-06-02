@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>D4SG | VIM</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.16.2/css/uikit.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+    <style type="text/css">
+        body, .fontzi {
+            font-size: 18px;
+        }
+        .center, h1 {
+            text-align: center;
+        }
+        .intro {
+            border-radius: 50%;
+            border:5px solid #fff;
+            width: 180px;
+            height: 180px;
+        }
+        .top {
+            margin-top: -35px;
+        }
+        h1 {
+            margin-top: 100px;
+            margin-bottom: 50px;
+        }
+        .top15 {
+            margin-top: -15px;
+        }
+        .h1ma {
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        .h1to {
+            margin-top: 30px;
+        }
+        nav {
+            font-size: 30px;
+            color: WHITE;
+        }
+        ul, .male, ol {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body role="document">
+
+<!--navbar-->
+<nav class="center navbar navbar-inverse navbar-fixed-top"><strong>D4SG w/ SuangLien Foundation for the Visually Impaired</strong></nav>
+<br/><br/><br/>
+
+<!--Name contain-->
+<div class="top container theme-showcase">
+<br>
+    <table class="top15 center table table-striped">
+        <tr><td colspan="3">@ NCCU VIM</td></tr>
+        <tr>
+            <td><img class="intro" src="http://i.imgur.com/E85nYs9.png"/><br><strong>Blackzid Xu<strong></td>
+            <td><img class="intro" src="http://i.imgur.com/lDqyJGX.jpg"/><br><strong>Louise Lin<strong></td>
+            <td><img class="intro" src="http://i.imgur.com/WaHuFTh.jpg"/><br><strong>Noel Bao<strong></td>
+        </tr>
+        <tr><td colspan="3"></tr>
+    </table>
+    
+
+    
+
+    <div class="top jumbotron">
+        <h1 class="h1ma h1to"><strong>INTRODUCTION</strong></h1>
+        <span>
+            視障朋友從事按摩以外的工作時，常常面臨多重挑戰，其中有視障所產生的就業困境；同時也會面對一般普遍的就業挑戰。在非營利組織<a href="http://www.suanlien.org.tw/Massage/Default.aspx"> 雙連視障關懷基金會</a>，致力爭取視障朋友工作機會下，按摩小站設立於醫院，提供一個明亮開放的空間，在醫療院所明亮開放的環境下，願意嘗試視障按摩的朋友因此變多！視障朋友藉於按摩小站服務，走入社區，走入人群，讓更多人了解視障按摩、了解視障，進而創造對視障朋友更友善的社會環境。
+        </span><br><br>
+        <img class="d4sgimg" src="http://i.imgur.com/spz6mqb.jpg" /><br>
+        <span><em>仁愛醫院小站。<br>(Image Credit: Provided by ShuangLien Foundation)</em></span><br>
+        
+
+        <h1><strong>PROBLEM</strong></h1>
+        <span>
+            在非營利組織<a href="http://www.suanlien.org.tw/Massage/Default.aspx"> 雙連視障關懷基金會 </a>積極爭取下，目前有10個按摩小站，大多駐點於醫療院所內，提供約100位按摩師穩定就業機會。然而累積了大量紙本的記錄工作表與非細節的電子式文檔，卻因為資料不夠完善，讓這些寶貴資料無處發揮。
+            另外，按摩小站的排班在管理是一大負擔，人工調動排班靠得是人腦記憶跟有限的資訊，此時就有可能造成師傅之間的誤會。所以如果在有大量可用的資料後，進而發掘資料價值，透過資料分析，產出信服人的資料視覺化呈現。
+        </span><br><br>
+        <img class="d4sgimg" src="http://i.imgur.com/CzvGeBB.jpg" /><br>
+        <span><em>在有大量可用的資料後，進而發掘資料價值，透過資料分析，產出信服人的資料視覺化呈現。<br>(Image Credit: http://d4sg.org)</em></span>
+        
+
+        <h1><strong>METHOD</strong></h1>
+        <span>
+            根據上述所遇到的問題，我們分為兩個部份：<br>
+            <ul><li>後台的資料庫管理要如何呈現？資料的欄位要有哪些？</li>
+            <li>前台要給使用者哪些比較的選擇？以及比較過後給予回饋的呈現？</li></ul>
+            [1] Azure架設資料庫建設前後端。後台使用 php將功能主要分為「增加工作記錄」與「管理按摩師傅與各小站」。原本<a href="http://www.suanlien.org.tw/Massage/Default.aspx"> 雙連視障關懷基金會 </a>提供的電子檔資料只有儲存一個按摩師傅一天總共的薪水，與紙本上相比未將「指定節數」、「未指定節數」和「來客數」等詳細資料也作記錄。為了統一資料庫名稱，我們共同討論資料欄位名稱，這時我們就將前述也附加上去。<br><br>
+            [2] 前台使用 JS 傳使用者選定資料跟後台要資料庫資料的時候，會依據後台接收到的字串，使用 python plotly 做資料視覺化呈現，再透過 api 方式傳回前端。<br><br>
+            <div class="male"><strong>DEFINE: </strong><br><span class="male">asg 指定節數, nasg 未指定節數, gn 來客數, m 按摩師傅, s 小站, h 管理員, p 一段時間</span><br><br><strong>HYPOTHESIS: </strong><ol class="male"><li>If p in TARGET can only COMPARE asg, nasg, gn, asg-nasg</li><li>If BY count that COMPARE becomes ignorable</li><li>If p in BETWEEN should provide form, step</li></ol><strong>PSEUDOCODE: </strong><br><div class="male"><code class="fontzi">COMPARE {asg, nasg, gn} (select 1 → ... )<br>OF TARGET = {m, h, s, p} (select 0 → ... but not all)<br>BETWEEN {m, h, s, p} - TARGET (select 1)<br>BY{count, sum, avg} (select 1)<br></code></div></div>
+
+        </span><br><br>
+        <img class="d4sgimg" style="width: 800px; height: 600px;" src="http://i.imgur.com/2B9ufdt.jpg" /><br>
+        <span><em>Brainstorm for solution.<br>Image Credit: D4SG@NCCU</em></span>
+        
+
+        <h1><strong>RESULT</strong></h1>
+        <span>
+            在後台的部份，改善原本excel上資訊缺少的部份，每個小站每天師傅的工作記錄除了多筆新增外，還可以使用上傳excel(*.csv)的方式。另外針對按摩師傅與小站的管理也可做增修，方便管理。
+        </span><br><br>
+        <img class="d4sgimg" src="http://i.imgur.com/S8RPcES.jpg" /><br>
+        <span><em>Reality dashboard setting. (Illustration diagram)<br>Image Credit: D4SG@NCCU</em></span><br><br><br>
+
+        <span>
+            前端的部份簡易的操作環境，資訊就可以更細膩化，依據不同選擇後統計，讓圖表有不同的linechart, barchart等表示方式，方便管理員有所依據排班。
+            舉例：<br><ul><li><strong>不同[ 小站 ]的[ 來客數 ]在[ 四月期間 ]的[ 平均 ]比較</strong></li>
+            <li><strong>[ 四月期間 ]不同[ 按摩師傅 ][ 被指定節數 ]的比較</strong></li>
+            <li><strong>比較不同[ 師傅 ]的[ 指定節數 ]與[ 未指定節數 ]的[ 加總 ]</strong></li></ul>
+        </span><br>
+        <img class="d4sgimg" src="http://i.imgur.com/KztuSw3.jpg" /><br>
+        <span><em>Front-end UI. (Illustration diagram)<br>Image Credit: D4SG@NCCU</em></span><br><br>
+
+        <span>
+            
+        </span><br><br>
+        <img class="d4sgimg" src="http://i.imgur.com/7D2Xnqs.jpg" /><br>
+        <span><em>For instance of data visualization by python. (Illustration diagram) [ 四月期間不同按摩師傅被指定節數的比較 ]<br>Image Credit: D4SG@NCCU</em></span>
+        
+
+        <h1><strong>NEXT-STEP</strong></h1>
+        <span>
+            歷經一個多月的計劃執行，中間歷經資料轉換新格式難產和工程組面臨期中考等外務，從無到有的系統架構建置完成度八成，再來要考慮的面向：<ol><li>登錄工作記錄表的人員是否接受從excel的輸入形式轉至在網頁上輸入</li>
+            <li>資料儲存的問題，現行資料庫是架設在MS Azure上免費使用，但是當資料超過限定容量的額度前，要如何擴充資料庫外也可以平衡<a href="http://www.suanlien.org.tw/Massage/Default.aspx"> 雙連視障關懷基金會 </a>的營運</li>
+            </ol>
+            上述的提到的疑慮雖然問題不大，但是都是不容忽視的問題。也是在完成系統建置後所要解決。
+        </span><br><br><br>
+       <!--  <img class="d4sgimg" src="http://i.imgur.com/CzvGeBB.jpg" /><br>
+        <span><em>(應該會再換圖吧~)<br>Image Credit: http://d4sg.org</em></span> -->
+        
+
+    </div>
+    <!--end of button contain-->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="center"><p class="text-muted">All right reserved © 2016 D4SG@NCCU</p></div>
+        </div>
+    </footer>
+</div>
+<!--end of name contain-->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.16.2/js/uikit.min.js"></script>
+
+
+</body>
+</html>

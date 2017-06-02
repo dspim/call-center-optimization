@@ -1,0 +1,531 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"crea",
+				"create_div"
+			],
+			[
+				"incl",
+				"include"
+			],
+			[
+				"tx",
+				"txtId"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"sc",
+				"script"
+			],
+			[
+				"g",
+				"guest_num"
+			],
+			[
+				"for",
+				"for	for …"
+			],
+			[
+				"butt",
+				"Button"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"re",
+				"registrant"
+			],
+			[
+				"my",
+				"myFunction"
+			],
+			[
+				"la",
+				"lastname"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"m",
+				"mname"
+			],
+			[
+				"cl",
+				"class_exists"
+			],
+			[
+				"ut",
+				"utf-8"
+			],
+			[
+				"op",
+				"option"
+			],
+			[
+				"assign",
+				"assigned"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"ch",
+				"chk_count_m"
+			],
+			[
+				"chk",
+				"chk_count"
+			],
+			[
+				"POST",
+				"_POST"
+			],
+			[
+				"w",
+				"wid"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"fr",
+				"fruit	forstmt"
+			],
+			[
+				"sq",
+				"sql_query"
+			],
+			[
+				"tot",
+				"total_pages"
+			],
+			[
+				"sql",
+				"sql_select"
+			],
+			[
+				"els",
+				"else"
+			],
+			[
+				"log",
+				"log_date"
+			],
+			[
+				"lo",
+				"log_date"
+			],
+			[
+				"isn",
+				"is_null"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"cs",
+				"csvData"
+			],
+			[
+				"up",
+				"upfile"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"file",
+				"fileName"
+			],
+			[
+				"ex",
+				"exit"
+			],
+			[
+				"le",
+				"margin-left"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"n",
+				"narr"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"fil",
+				"fileName"
+			],
+			[
+				"lin",
+				"line_of_text"
+			],
+			[
+				"f",
+				"fdir"
+			],
+			[
+				"de",
+				"destination"
+			],
+			[
+				"di",
+				"dizhi"
+			],
+			[
+				"co",
+				"col1"
+			],
+			[
+				"recor",
+				"record_date"
+			],
+			[
+				"wor",
+				"worklog"
+			],
+			[
+				"al",
+				"text-align"
+			],
+			[
+				"one",
+				"onecase"
+			],
+			[
+				"rec",
+				"recordday"
+			],
+			[
+				"me",
+				"merged	statement"
+			],
+			[
+				"p",
+				"pprint	function"
+			],
+			[
+				"pa",
+				"pa	statement"
+			],
+			[
+				"wave",
+				"wave_write	function"
+			],
+			[
+				"wav",
+				"wave_data	statement"
+			],
+			[
+				"wa",
+				"wave_write	function"
+			],
+			[
+				"tun",
+				"tuned	statement"
+			],
+			[
+				"ra",
+				"raw_data	statement"
+			],
+			[
+				"pl",
+				"play_file	function"
+			],
+			[
+				"W",
+				"WAVE_NOW_FILENAME	param"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Anaconda Python Builder",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "Package Control: Install",
+		"selected_items":
+		[
+			[
+				"Package Control: Install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/LOUISE/blockly/webduino-blockly/blocks/tutorials.js",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/conn.php",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/create_view.php",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/div.php",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/create.php",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/index.php",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/create_div.php",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/test.php",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/delete.php",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/upload.php",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/helper.php",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/masseur.php",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/delete_m.php",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/python/print.py",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/api/py/index.php",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/api/worklog/index.php",
+		"/Users/LOUISE/Desktop/webduino.html",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/upload_s.php",
+		"/Users/LOUISE/Documents/D4SG/visually-impaired-masseurs/azure/untitled",
+		"/Users/LOUISE/Documents/D4SG/azure/index.php",
+		"/Users/LOUISE/Library/Mobile Documents/com~apple~CloudDocs/MutliMedia/MM_HW2/update/HW2_104753014.py",
+		"/Users/LOUISE/Desktop/MM_HW2/update/test.py",
+		"/Users/LOUISE/Desktop/MM_HW2/HW2_104753014.py",
+		"/Users/LOUISE/Library/Mobile Documents/com~apple~CloudDocs/MutliMedia/MM_HW2/test.wav",
+		"/Users/LOUISE/Library/Mobile Documents/com~apple~CloudDocs/MutliMedia/MM_HW2/1.py",
+		"/Users/LOUISE/Library/Mobile Documents/com~apple~CloudDocs/MutliMedia/MM_HW2/2.py",
+		"/Users/LOUISE/Library/Mobile Documents/com~apple~CloudDocs/MutliMedia/MM_HW2/3.py",
+		"/Users/LOUISE/Desktop/test.json",
+		"/Users/LOUISE/Library/Mobile Documents/com~apple~CloudDocs/MutliMedia/MM_HW2/1.wav"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"index",
+			"		 '<",
+			">\";\n",
+			"!\"; ",
+			"<p>Fill in all cases everyday, then click <strong>Submit</strong> to record.</p>\n<form method=\"post\" action=\"index.php\" enctype=\"multipart/form-data\" >\n      店名  <input type=\"text\" name=\"sid\" id=\"sid\"/></br>\n      日期  <input type=\"text\" name=\"log_date\" id=\"log_date\"/></br>\n      師傅編號 <input type=\"text\" name=\"mid\" id=\"mid\"/></br>\n      接待員編號 <input type=\"text\" name=\"hid\" id=\"hid\"/></br>\n      指定節數 <input type=\"text\" name=\"assigned\" id=\"assigned\"/></br>\n      未指定節數 <input type=\"text\" name=\"not_assigned\" id=\"not_assigned\"/></br>\n      來客數 <input type=\"text\" name=\"guest_num\" id=\"guest_num\"/></br>\n      <input type=\"submit\" name=\"submit\" value=\"Submit\" />\n</form>",
+			"<script type=\"text/javascript\">\n$('document').ready(function() {\n    $('.chkbox').attr('checked', this.checked)\n});\n\nfunction delete_record()\n{\ndocument.frm.action = \"delete.php\";\ndocument.frm.submit();\n}",
+			"db",
+			"danger",
+			"show",
+			"uploadfile",
+			"margintop",
+			"];\n",
+			"up",
+			"uptypes",
+			"G",
+			"id' =>",
+			"record_date",
+			"132096",
+			"len(ori) * 0.6",
+			"11025",
+			"ori",
+			"44100",
+			"110250",
+			"11025",
+			"ori",
+			"print",
+			"outfile",
+			"numpy",
+			"5"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 247.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "upload.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 195.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
